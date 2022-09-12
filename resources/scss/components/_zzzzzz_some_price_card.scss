@@ -1,0 +1,150 @@
+.card {
+
+  position: relative;
+  perspective: 150rem;
+  min-height: 56rem;
+
+  &:hover &--side_front {
+    transform: rotateY(-180deg);
+
+  }
+
+  &:hover &--side_back {
+    transform: rotateY(0deg);
+
+  }
+
+
+  &--side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 56rem;
+    text-align: center;
+
+    transition: all .6s ease;
+    backface-visibility: hidden;
+    box-shadow: 2px 3px 4rem rgba(black, .2);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &_front {
+      background-color: white;
+      display: block;
+
+    }
+
+    &_back {
+      position: relative;
+      background-image: linear-gradient(to right bottom, $color-yellow, $color-warning);
+      border-radius: 3px;
+      box-shadow: 2px 4px 3rem rgba(black, .2);
+      background-color: green;
+      transform: rotateY(180deg);
+
+    }
+  }
+
+  &--image {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    height: 23rem;
+
+    background-size: cover;
+    background-blend-mode: screen;
+
+    &_orange {
+      background-image: linear-gradient(to right bottom, $color-yellow, $color-warning),
+      url("../img/nat-5.jpg");
+    }
+
+    &_green {
+      background-image: linear-gradient(to right bottom, $color-secondary, $color-success),
+      url("../img/nat-6.jpg");
+    }
+
+    &_blue {
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+      url("../img/nat-7.jpg");
+
+    }
+
+  }
+
+
+  &--heading {
+    position: absolute;
+    text-align: right;
+    bottom: 2rem;
+    right: 2rem;
+    max-width: 50%;
+
+    &-container {
+      position: relative;
+    }
+
+    &-text {
+      font-weight: 300;
+      font-size: 3rem;
+      max-width: 50%;
+      color: white;
+      text-align: right;
+
+      padding: .7rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &_orange {
+        background-image: linear-gradient(to right bottom, $color-yellow, $color-warning)
+      }
+
+      &_green {
+        background-image: linear-gradient(to right bottom, $color-secondary, $color-success)
+      }
+
+      &_blue {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark)
+
+      }
+    }
+
+  }
+
+  &--details {
+    padding-bottom: 3.1rem;
+    list-style-type: none;
+    width: 80%;
+    margin: 0 auto;
+
+    &_item {
+      padding: 1.3rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  &--cta {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  &--price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+  }
+
+  &--price-only {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+}
+

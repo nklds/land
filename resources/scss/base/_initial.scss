@@ -1,0 +1,8 @@
+.html {
+    font-size: .625em;
+    transition: all 0.2s ease-in-out;
+    @media all and (max-width: 1024px) {
+        font-size: 0.3em;
+    }
+
+}

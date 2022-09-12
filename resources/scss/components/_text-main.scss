@@ -1,0 +1,12 @@
+.text-main {
+    color: $light;
+
+    &__heading {
+        font-size: 3rem;
+        margin: 1.8rem;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}

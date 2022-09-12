@@ -1,0 +1,77 @@
+// utils
+.text-center {
+    text-align: center
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.phone-icon {
+    &::before {
+        content: '\260E';
+        padding-right: .8rem;
+        transition: all 0.2s ease-in-out;
+        display: inline-block;
+    }
+
+    &:hover::before {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+.wrapper {
+    background-color: $light;
+    padding: 3rem;
+
+    @media all and (max-width: 1024px) {
+        padding: 0;
+    }
+
+    &-hero {
+        border-radius: 1rem;
+        min-height: 90vh;
+        background-color: $light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url("/img/back.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        position: relative;
+    }
+    &-comments {
+
+        border-radius: 1rem;
+        min-height: 60vh;
+        background-color: $light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    &-cta {
+        border-radius: 1rem;
+        min-height: 60vh;
+        color: $light;
+        background-color: $dark;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+}
+
+.free__text{
+    color: $danger;
+    font-size: 1.8rem;
+    text-align: center;
+}
